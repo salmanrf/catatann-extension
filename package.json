@@ -1,0 +1,22 @@
+{
+  "name": "catatann-extension",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "watch": "webpack --watch",
+    "build": "webpack --config content.webpack.config.js && rsync -av --exclude='node_modules' . /mnt/d/salman/programming/catatann-extension"
+  },
+  "devDependencies": {
+    "chrome-types": "^0.1.178",
+    "css-loader": "^6.7.3",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.5",
+    "webpack": "^5.76.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "@arrow-js/core": "^1.0.0-alpha.8"
+  }
+}
