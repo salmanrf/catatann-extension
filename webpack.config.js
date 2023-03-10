@@ -2,10 +2,13 @@ const path = require("path");
 
 module.exports = {
   mode: "production",
-  entry: "./lib/content-scripts/main.js",
+  entry: {
+    content: "./lib/content-scripts/main.js",
+    popup: "./lib/popup/main.js",
+  },
   output: {
     filename: "[name].js",
-    path: path.resolve(__dirname, "dist/content-scripts"),
+    path: path.resolve(__dirname, "dist/"),
     clean: true,
   },
   module: {

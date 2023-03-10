@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "watch": "webpack --watch",
-    "build": "webpack --config content.webpack.config.js && rsync -av --exclude='node_modules' . /mnt/d/salman/programming/catatann-extension"
+    "start": "webpack serve --open",
+    "build": "webpack && rsync -av --exclude='node_modules' . /mnt/d/salman/programming/catatann-extension"
   },
   "devDependencies": {
     "chrome-types": "^0.1.178",
@@ -14,7 +15,8 @@
     "ts-loader": "^9.4.2",
     "typescript": "^4.9.5",
     "webpack": "^5.76.0",
-    "webpack-cli": "^5.0.1"
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
     "@arrow-js/core": "^1.0.0-alpha.8"
