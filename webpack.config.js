@@ -3,6 +3,7 @@ const path = require("path");
 module.exports = {
   mode: "production",
   entry: {
+    worker: "./lib/service-workers/main.js",
     content: "./lib/content-scripts/main.js",
     popup: "./lib/popup/main.js",
   },
@@ -12,6 +13,7 @@ module.exports = {
     clean: true,
   },
   module: {
-    rules: [{ test: /\.css$/i, use: ["style-loader", "css-loader"] }],
+    rules: [{ test: /\.s[ac]ss$/i, use: ["style-loader", "css-loader", "sass-loader"] }],
   },
+  devtool: "inline-source-map",
 };

@@ -5,8 +5,11 @@
   "description": "Create clean looking notes quickly with markdown, anywhere in the browser.",
   "content_scripts": [
     {
-      "js": ["dist/content-scripts/main.js"],
+      "js": ["dist/content.js"],
       "matches": ["http://*/*", "https://*/*"]
     }
-  ]
+  ],
+  "background": {
+    "service_worker": "dist/worker.js"
+  }
 }
