@@ -3,6 +3,11 @@
   "name": "Catatann",
   "version": "1.0",
   "description": "Create clean looking notes quickly with markdown, anywhere in the browser.",
+  "permissions": ["alarms", "scripting", "storage"],
+  "host_permissions": ["http://localhost:5174/*", "http://localhost:8080/*"],
+  "action": {
+    "default_popup": "dist/popup.html"
+  },
   "content_scripts": [
     {
       "js": ["dist/content.js"],
@@ -10,6 +15,7 @@
     }
   ],
   "background": {
-    "service_worker": "dist/worker.js"
+    "service_worker": "dist/worker.js",
+    "type": "module"
   }
 }
